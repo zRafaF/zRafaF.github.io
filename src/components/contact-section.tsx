@@ -1,9 +1,9 @@
-import { motion } from "framer-motion"
-import { Terminal, Download, Github, Linkedin, Mail } from "lucide-react"
-import { useTranslation } from "../hooks/use-translation"
+import { motion } from "framer-motion";
+import { Terminal, Download, Github, Linkedin, Mail } from "lucide-react";
+import { useTranslation } from "../hooks/use-translation";
 
 export function ContactSection() {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
@@ -14,8 +14,12 @@ export function ContactSection() {
 
       <div className="container relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("contactTitle")}</h2>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">{t("contactSubtitle")}</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {t("contactTitle")}
+          </h2>
+          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+            {t("contactSubtitle")}
+          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -28,7 +32,9 @@ export function ContactSection() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-bold mb-4 animated-gradient-text">{t("activelyBuilding")}</h3>
+              <h3 className="text-xl font-bold mb-4 animated-gradient-text">
+                {t("activelyBuilding")}
+              </h3>
               <p className="text-foreground/70">{t("activelySub")}</p>
             </motion.div>
 
@@ -39,7 +45,9 @@ export function ContactSection() {
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-lg font-semibold mb-4">{t("academicPartners")}</h3>
+              <h3 className="text-lg font-semibold mb-4">
+                {t("academicPartners")}
+              </h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-4 bg-background rounded-lg flex items-center justify-center h-20">
                   <img
@@ -68,7 +76,9 @@ export function ContactSection() {
                   />
                 </div> */}
                 <div className="p-4 bg-background rounded-lg flex items-center justify-center h-20">
-                  <div className="text-center text-foreground/50 text-sm">{t("morePartners")}</div>
+                  <div className="text-center text-foreground/50 text-sm">
+                    {t("morePartners")}
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -83,7 +93,9 @@ export function ContactSection() {
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-lg font-semibold mb-4">{t("connectWithMe")}</h3>
+              <h3 className="text-lg font-semibold mb-4">
+                {t("connectWithMe")}
+              </h3>
               <div className="space-y-4">
                 <a
                   href="https://github.com/zrafaf"
@@ -109,7 +121,9 @@ export function ContactSection() {
                   </div>
                   <div>
                     <div className="font-medium">{t("email")}</div>
-                    <div className="text-sm text-foreground/70">rafaelmeneses@alunos.utfpr.edu.br</div>
+                    <div className="text-sm text-foreground/70">
+                      rafaelmeneses@alunos.utfpr.edu.br
+                    </div>
                   </div>
                 </a>
 
@@ -124,7 +138,9 @@ export function ContactSection() {
                   </div>
                   <div>
                     <div className="font-medium">LinkedIn</div>
-                    <div className="text-sm text-foreground/70">linkedin.com/in/rafael-farias-meneses</div>
+                    <div className="text-sm text-foreground/70">
+                      linkedin.com/in/rafael-farias-meneses
+                    </div>
                   </div>
                 </a>
               </div>
@@ -138,7 +154,7 @@ export function ContactSection() {
               viewport={{ once: true }}
             >
               <a
-                href="/resume.pdf"
+                href="./resume.pdf"
                 download
                 className="inline-flex items-center gap-2 px-6 py-3 bg-card rounded-lg border border-border hover:bg-card/80 transition-colors group"
               >
@@ -146,7 +162,8 @@ export function ContactSection() {
                   <Terminal className="w-5 h-5" />
                 </div>
                 <div className="font-mono text-sm">
-                  <span className="text-foreground/50">$</span> wget rfm-portfolio/curriculo.pdf
+                  <span className="text-foreground/50">$</span> wget
+                  rfm-portfolio/curriculo.pdf
                 </div>
                 <Download className="w-4 h-4 text-foreground/50 group-hover:text-foreground transition-colors" />
               </a>
@@ -155,5 +172,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

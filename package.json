@@ -20,6 +20,7 @@
     "jiti": "latest",
     "less": "latest",
     "lightningcss": "latest",
+    "autoprefixer": "^10.4.20",
     "lucide-react": "^0.454.0",
     "react": "^19",
     "react-dom": "^19",

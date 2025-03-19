@@ -5,6 +5,8 @@ import { SkillsMatrix } from "./components/skills-matrix"
 import { ProjectsGrid } from "./components/projects-grid"
 import { ContactSection } from "./components/contact-section"
 
+
+
 function App() {
   return (
     <LanguageProvider>

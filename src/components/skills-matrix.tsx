@@ -16,7 +16,8 @@ import {
   SiNodedotjs,
   SiMongodb,
   SiPostgresql,
-  SiArduino,
+  SiEspressif,
+  SiStmicroelectronics,
   SiRaspberrypi,
   SiMqtt,
 } from "react-icons/si"
@@ -58,7 +59,7 @@ const SKILLS = [
     name: "PCB Design",
     icon: GiCircuitry,
     category: "embedded",
-    experience: 85,
+    experience: 95,
   },
   {
     name: "Microcontrollers",
@@ -67,10 +68,15 @@ const SKILLS = [
     experience: 90,
   },
   {
-    name: "Arduino",
-    icon: SiArduino,
+    name: "ESP",
+    icon: SiEspressif,
     category: "embedded",
-    experience: 95,
+    experience: 90,
+  },{
+    name: "STM32",
+    icon: SiStmicroelectronics,
+    category: "embedded",
+    experience: 80,
   },
   {
     name: "Raspberry Pi",

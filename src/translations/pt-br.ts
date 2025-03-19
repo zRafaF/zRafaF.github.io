@@ -1,7 +1,7 @@
 export const ptBR = {
   // Status Banner
   available: "Disponível para",
-  opportunities: "Trabalho | Hackathons | Colaborações",
+  opportunities: "Projetos | Hackathons | Colaborações",
   getInTouch: "Entre em Contato",
   contact: "Contato",
 

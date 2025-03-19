@@ -1,10 +1,7 @@
-"use client"
-
 import { AnimatedText } from "./animated-text"
 import { useInView } from "react-intersection-observer"
 import { useEffect, useState } from "react"
 import { cn } from "../lib/utils"
-import { PlaceholderImage } from "./placeholder-image"
 import { useTranslation } from "../hooks/use-translation"
 
 export function HeroSection() {
@@ -94,9 +91,10 @@ export function HeroSection() {
             )}
           >
             <div className="relative w-[90%] aspect-square max-w-md animate-float">
-              <PlaceholderImage
+              <img
                 width={400}
                 height={400}
+                src="/overview-image.png"
                 alt="3D Visual combining circuit board, code snippets and drone model"
                 className="z-10 relative"
               />

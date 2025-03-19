@@ -1,7 +1,7 @@
 export const en = {
   // Status Banner
   available: "Available for",
-  opportunities: "Work | Hackathons | Collaborations",
+  opportunities: "Projects | Hackathons | Collaborations",
   getInTouch: "Get in Touch",
   contact: "Contact",
 

@@ -34,7 +34,7 @@ const PROJECTS: Project[] = [
     title: "Virote/UAV",
     description:
       "Autonomous drone system with OpenCV precision landing. Partnered with SANEPAR for environmental monitoring.",
-    image: "https://via.placeholder.com/500x300",
+    image: "./virote.png",
     tags: ["Python", "React", "OpenCV", "3D Modeling"],
     status: ["university-partnership", "ongoing"],
   },
@@ -112,7 +112,7 @@ export function ProjectsGrid() {
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-containt"
                   loading="lazy"
                 />
 

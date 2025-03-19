@@ -1,22 +1,22 @@
-import { AnimatedText } from "./animated-text"
-import { useInView } from "react-intersection-observer"
-import { useEffect, useState } from "react"
-import { cn } from "../lib/utils"
-import { useTranslation } from "../hooks/use-translation"
+import { AnimatedText } from "./animated-text";
+import { useInView } from "react-intersection-observer";
+import { useEffect, useState } from "react";
+import { cn } from "../lib/utils";
+import { useTranslation } from "../hooks/use-translation";
 
 export function HeroSection() {
-  const { t } = useTranslation()
-  const [loaded, setLoaded] = useState(false)
+  const { t } = useTranslation();
+  const [loaded, setLoaded] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   useEffect(() => {
     if (inView) {
-      setTimeout(() => setLoaded(true), 300)
+      setTimeout(() => setLoaded(true), 300);
     }
-  }, [inView])
+  }, [inView]);
 
   return (
     <section className="min-h-screen pt-16 pb-12 flex items-center">
@@ -26,11 +26,14 @@ export function HeroSection() {
             ref={ref}
             className={cn(
               "space-y-6 transition-all duration-700 transform",
-              inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0",
+              inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             )}
           >
             <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-              <AnimatedText text={t("heroTitle1")} className="block animated-gradient-text" />
+              <AnimatedText
+                text={t("heroTitle1")}
+                className="block animated-gradient-text"
+              />
               <span className="block text-foreground">{t("heroTitle2")}</span>
             </h1>
 
@@ -38,7 +41,9 @@ export function HeroSection() {
               <p
                 className={cn(
                   "transition-all duration-500 delay-300",
-                  loaded ? "translate-x-0 opacity-100" : "translate-x-5 opacity-0",
+                  loaded
+                    ? "translate-x-0 opacity-100"
+                    : "translate-x-5 opacity-0"
                 )}
               >
                 {t("heroParagraph1")}
@@ -47,7 +52,9 @@ export function HeroSection() {
               <p
                 className={cn(
                   "transition-all duration-500 delay-500",
-                  loaded ? "translate-x-0 opacity-100" : "translate-x-5 opacity-0",
+                  loaded
+                    ? "translate-x-0 opacity-100"
+                    : "translate-x-5 opacity-0"
                 )}
               >
                 {t("heroParagraph2")}
@@ -56,7 +63,9 @@ export function HeroSection() {
               <p
                 className={cn(
                   "transition-all duration-500 delay-700",
-                  loaded ? "translate-x-0 opacity-100" : "translate-x-5 opacity-0",
+                  loaded
+                    ? "translate-x-0 opacity-100"
+                    : "translate-x-5 opacity-0"
                 )}
               >
                 {t("heroParagraph3")}
@@ -66,7 +75,9 @@ export function HeroSection() {
             <div
               className={cn(
                 "flex gap-4 transition-all duration-500 delay-1000",
-                loaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0",
+                loaded
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0"
               )}
             >
               <a
@@ -87,7 +98,7 @@ export function HeroSection() {
           <div
             className={cn(
               "relative flex justify-center items-center transition-all duration-700 transform",
-              inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0",
+              inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             )}
           >
             <div className="relative w-[90%] aspect-square max-w-md animate-float">
@@ -114,6 +125,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

@@ -20,49 +20,49 @@ interface Project {
 
 // Project data
 const PROJECTS: Project[] = [
-  {
-    id: "educautf",
-    title: "EducaUTF",
-    description:
-      "Scalable educational platform with 1.5k monthly impressions. Handled full-stack development + on-prem Docker deployment.",
-    image: "https://via.placeholder.com/500x300",
-    tags: ["Next.js", "MUI", "Pocketbase", "Reverse Proxy"],
-    status: ["university-partnership"],
-  },
-  {
-    id: "virote-uav",
-    title: "Virote/UAV",
-    description:
-      "Autonomous drone system with OpenCV precision landing. Partnered with SANEPAR for environmental monitoring.",
-    image: "./virote.png",
-    tags: ["Python", "React", "OpenCV", "3D Modeling"],
-    status: ["university-partnership", "ongoing"],
-  },
+  
   {
     id: "proteja",
     title: "ProteJÁ",
     description:
-      "Hackathon-winning fall-detection ecosystem. Designed ultra-efficient wearable hardware + PWA interface.",
-    image: "https://via.placeholder.com/500x300",
-    tags: ["IoT", "Supabase", "MQTT", "Hackathon"],
-    status: ["award-winning", "completed"],
+    "Ecossistema de detecção de quedas vencedor de hackathon Claro Campus Mobile. Hardware vestível ultraeficiente + interface PWA.",
+    image: "./proteja.png",
+    tags: ["IoT", "Supabase", "React", "MQTT", "Hackathon", "Edge Computing"],
+    status: ["award-winning", "ongoing"],
   },
   {
     id: "rastreia",
     title: "RastreIA",
     description:
-      "AI-powered stolen item registry for the Ministry of Justice. Built with Next.js + FastAPI microservices.",
-    image: "https://via.placeholder.com/500x300",
+    "Registro de itens roubados com IA para o Ministério da Justiça. Construído com Next.js + microsserviços FastAPI.",
+    image: "./rastreia.png",
     tags: ["AuthJS", "MongoDB", "Shadcn", "AI"],
     status: ["university-partnership", "completed"],
   },
   {
-    id: "petrobras-hackathon",
-    title: "Petrobras Hackathon",
-    description: "2nd place solution for predictive oil field maintenance using time-series analysis.",
-    image: "https://via.placeholder.com/500x300",
-    tags: ["Python", "Data Science", "Hackathon"],
-    status: ["award-winning", "completed"],
+    id: "landing-page",
+    title: "Portifólio",
+    description: "Landing page e portifólio com meus principais projetos e habilidades.",
+    image: "./landing-page.png",
+    tags: ["React", "Tailwind", "Ci/CD"],
+    status: ["completed"],
+  },{
+    id: "educautf",
+    title: "EducaUTF",
+    description:
+    "Plataforma educacional escalável em seu pico teve mais de 1,5k impressões mensais. Desenvolvimento full-stack + implantação Docker on-prem.",
+    image: "./educa-utf.png",
+    tags: ["Next.js", "MUI", "Pocketbase", "Reverse Proxy"],
+    status: ["university-partnership", "completed"],
+  },
+  {
+    id: "virote-uav",
+    title: "Virote",
+    description:
+      "Sistema de planejamento de missões e pouso de precisão para drones.",
+    image: "./virote.png",
+    tags: ["Python", "React", "OpenCV", "3D Modeling"],
+    status: ["university-partnership", "completed"],
   },
 ]
 

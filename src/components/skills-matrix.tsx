@@ -9,7 +9,6 @@ import { TbBrain, TbMathFunction, TbDeviceAnalytics } from "react-icons/tb"
 import { RiRobot2Fill } from "react-icons/ri"
 import {
   SiTensorflow,
-  SiPytorch,
   SiReact,
   SiNextdotjs,
   SiTypescript,
@@ -20,6 +19,8 @@ import {
   SiStmicroelectronics,
   SiRaspberrypi,
   SiMqtt,
+  SiOllama,
+  SiDeno,
 } from "react-icons/si"
 import { TerminalAnimation } from "./terminal-animation"
 import { useTranslation } from "../hooks/use-translation"
@@ -32,10 +33,16 @@ const SKILLS = [
     experience: 90,
   },
   {
-    name: "Nginx",
+    name: "Reverse Proxy",
     icon: FaServer,
     category: "devops",
     experience: 85,
+  },
+  {
+    name: "Edge Computing",
+    icon: SiDeno,
+    category: "devops",
+    experience: 80,
   },
   {
     name: "CI/CD",
@@ -62,12 +69,6 @@ const SKILLS = [
     experience: 95,
   },
   {
-    name: "Microcontrollers",
-    icon: GiProcessor,
-    category: "embedded",
-    experience: 90,
-  },
-  {
     name: "ESP",
     icon: SiEspressif,
     category: "embedded",
@@ -91,16 +92,10 @@ const SKILLS = [
     experience: 80,
   },
   {
-    name: "TensorFlow",
-    icon: SiTensorflow,
+    name: "LLM",
+    icon: SiOllama,
     category: "ai-ml",
-    experience: 75,
-  },
-  {
-    name: "PyTorch",
-    icon: SiPytorch,
-    category: "ai-ml",
-    experience: 70,
+    experience: 85,
   },
   {
     name: "Computer Vision",
@@ -109,10 +104,10 @@ const SKILLS = [
     experience: 80,
   },
   {
-    name: "NLP",
-    icon: TbBrain,
+    name: "Vector Data",
+    icon: SiMongodb,
     category: "ai-ml",
-    experience: 65,
+    experience: 75,
   },
   {
     name: "Machine Learning",
@@ -157,7 +152,7 @@ const SKILLS = [
     experience: 80,
   },
   {
-    name: "Embedded Linux",
+    name: "FreeRTOS",
     icon: MdMemory,
     category: "iot",
     experience: 75,

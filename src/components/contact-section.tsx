@@ -50,14 +50,15 @@ export function ContactSection() {
                     className="max-h-12 w-auto object-contain"
                   />
                 </div>
-                {/* <div className="p-4 bg-background rounded-lg flex items-center justify-center h-20">
-                  <PlaceholderImage
+                <div className="p-4 bg-background rounded-lg flex items-center justify-center h-20">
+                  <img
                     width={120}
                     height={60}
+                    src="https://bioparkeducacao.com/wp-content/uploads/2024/03/Ativo-1.png"
                     alt="SANEPAR Logo"
                     className="max-h-12 w-auto object-contain"
                   />
-                </div> */}
+                </div>
                 {/* <div className="p-4 bg-background rounded-lg flex items-center justify-center h-20">
                   <PlaceholderImage
                     width={120}

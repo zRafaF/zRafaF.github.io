@@ -1,14 +1,11 @@
-"use client"
-
-import { useState } from "react"
-import { cn } from "../lib/utils"
-import { FaDocker, FaServer, FaCloud } from "react-icons/fa"
-import { GiCircuitry, GiProcessor } from "react-icons/gi"
-import { MdMemory, MdSensors } from "react-icons/md"
-import { TbBrain, TbMathFunction, TbDeviceAnalytics } from "react-icons/tb"
-import { RiRobot2Fill } from "react-icons/ri"
+import { useState } from "react";
+import { cn } from "../lib/utils";
+import { FaDocker, FaServer, FaCloud } from "react-icons/fa";
+import { GiCircuitry } from "react-icons/gi";
+import { MdMemory, MdSensors } from "react-icons/md";
+import { TbMathFunction, TbDeviceAnalytics } from "react-icons/tb";
+import { RiRobot2Fill } from "react-icons/ri";
 import {
-  SiTensorflow,
   SiReact,
   SiNextdotjs,
   SiTypescript,
@@ -21,9 +18,9 @@ import {
   SiMqtt,
   SiOllama,
   SiDeno,
-} from "react-icons/si"
-import { TerminalAnimation } from "./terminal-animation"
-import { useTranslation } from "../hooks/use-translation"
+} from "react-icons/si";
+import { TerminalAnimation } from "./terminal-animation";
+import { useTranslation } from "../hooks/use-translation";
 
 const SKILLS = [
   {
@@ -73,7 +70,8 @@ const SKILLS = [
     icon: SiEspressif,
     category: "embedded",
     experience: 90,
-  },{
+  },
+  {
     name: "STM32",
     icon: SiStmicroelectronics,
     category: "embedded",
@@ -163,11 +161,11 @@ const SKILLS = [
     category: "iot",
     experience: 70,
   },
-]
+];
 
 export function SkillsMatrix() {
-  const { t } = useTranslation()
-  const [activeCategory, setActiveCategory] = useState("all")
+  const { t } = useTranslation();
+  const [activeCategory, setActiveCategory] = useState("all");
 
   // Define categories with translations
   const CATEGORIES = [
@@ -177,16 +175,23 @@ export function SkillsMatrix() {
     { id: "ai-ml", label: t("aiMl") },
     { id: "full-stack", label: t("fullStack") },
     { id: "iot", label: t("iot") },
-  ]
+  ];
 
-  const filteredSkills = activeCategory === "all" ? SKILLS : SKILLS.filter((skill) => skill.category === activeCategory)
+  const filteredSkills =
+    activeCategory === "all"
+      ? SKILLS
+      : SKILLS.filter((skill) => skill.category === activeCategory);
 
   return (
     <section id="skills" className="py-20">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("skillsTitle")}</h2>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">{t("skillsSubtitle")}</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {t("skillsTitle")}
+          </h2>
+          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+            {t("skillsSubtitle")}
+          </p>
         </div>
 
         {/* Category Tabs */}
@@ -199,7 +204,7 @@ export function SkillsMatrix() {
                 "px-4 py-2 rounded-full text-sm font-medium transition-all",
                 activeCategory === category.id
                   ? "bg-emerald-500 text-white shadow-md"
-                  : "bg-secondary hover:bg-secondary/80",
+                  : "bg-secondary hover:bg-secondary/80"
               )}
             >
               {category.label}
@@ -240,7 +245,9 @@ export function SkillsMatrix() {
         {/* Terminal Animation - Only show for DevOps category */}
         {(activeCategory === "all" || activeCategory === "devops") && (
           <div className="mt-16">
-            <h3 className="text-xl font-semibold mb-4 text-center">{t("devOpsInAction")}</h3>
+            <h3 className="text-xl font-semibold mb-4 text-center">
+              {t("devOpsInAction")}
+            </h3>
             <div className="max-w-3xl mx-auto">
               <TerminalAnimation />
             </div>
@@ -248,6 +255,5 @@ export function SkillsMatrix() {
         )}
       </div>
     </section>
-  )
+  );
 }
-

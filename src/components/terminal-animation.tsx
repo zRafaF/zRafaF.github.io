@@ -1,15 +1,22 @@
-"use client"
-
-import { useState, useEffect } from "react"
-import { cn } from "../lib/utils"
+import { useState, useEffect } from "react";
+import { cn } from "../lib/utils";
 
 const COMMANDS = [
   { text: "$ sudo nginx -t", delay: 500 },
-  { text: "nginx: the configuration file /etc/nginx/nginx.conf syntax is ok", delay: 1000 },
-  { text: "nginx: configuration file /etc/nginx/nginx.conf test is successful", delay: 300 },
+  {
+    text: "nginx: the configuration file /etc/nginx/nginx.conf syntax is ok",
+    delay: 1000,
+  },
+  {
+    text: "nginx: configuration file /etc/nginx/nginx.conf test is successful",
+    delay: 300,
+  },
   { text: "$ sudo systemctl reload nginx", delay: 800 },
   { text: "$ docker-compose ps", delay: 1200 },
-  { text: "NAME                COMMAND                  SERVICE             STATUS              PORTS", delay: 300 },
+  {
+    text: "NAME                COMMAND                  SERVICE             STATUS              PORTS",
+    delay: 300,
+  },
   {
     text: 'api                 "node dist/main.js"      api                 running             0.0.0.0:3000->3000/tcp',
     delay: 200,
@@ -27,40 +34,40 @@ const COMMANDS = [
     delay: 200,
   },
   { text: "$ ", delay: 1000, loop: true },
-]
+];
 
 export function TerminalAnimation() {
-  const [lines, setLines] = useState<string[]>([])
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [cursorVisible, setCursorVisible] = useState(true)
+  const [lines, setLines] = useState<string[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [cursorVisible, setCursorVisible] = useState(true);
 
   useEffect(() => {
     // Blink cursor
     const cursorInterval = setInterval(() => {
-      setCursorVisible((prev) => !prev)
-    }, 530)
+      setCursorVisible((prev) => !prev);
+    }, 530);
 
-    return () => clearInterval(cursorInterval)
-  }, [])
+    return () => clearInterval(cursorInterval);
+  }, []);
 
   useEffect(() => {
     if (currentIndex < COMMANDS.length) {
       const timer = setTimeout(() => {
-        setLines((prev) => [...prev, COMMANDS[currentIndex].text])
-        setCurrentIndex((prev) => prev + 1)
-      }, COMMANDS[currentIndex].delay)
+        setLines((prev) => [...prev, COMMANDS[currentIndex].text]);
+        setCurrentIndex((prev) => prev + 1);
+      }, COMMANDS[currentIndex].delay);
 
-      return () => clearTimeout(timer)
+      return () => clearTimeout(timer);
     } else if (COMMANDS[COMMANDS.length - 1].loop) {
       // Reset to beginning for loop
       const timer = setTimeout(() => {
-        setLines([])
-        setCurrentIndex(0)
-      }, 2000)
+        setLines([]);
+        setCurrentIndex(0);
+      }, 2000);
 
-      return () => clearTimeout(timer)
+      return () => clearTimeout(timer);
     }
-  }, [currentIndex])
+  }, [currentIndex]);
 
   return (
     <div className="bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-gray-800">
@@ -71,7 +78,9 @@ export function TerminalAnimation() {
           <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
           <div className="w-3 h-3 rounded-full bg-green-500"></div>
         </div>
-        <div className="mx-auto text-gray-400 text-sm font-medium">terminal@rfm-portfolio ~ DevOps</div>
+        <div className="mx-auto text-gray-400 text-sm font-medium">
+          terminal@rfm-portfolio ~ DevOps
+        </div>
       </div>
 
       {/* Terminal Content */}
@@ -82,10 +91,12 @@ export function TerminalAnimation() {
           </div>
         ))}
         <span
-          className={cn("inline-block w-2 h-4 bg-green-400 ml-0.5", cursorVisible ? "opacity-100" : "opacity-0")}
+          className={cn(
+            "inline-block w-2 h-4 bg-green-400 ml-0.5",
+            cursorVisible ? "opacity-100" : "opacity-0"
+          )}
         ></span>
       </div>
     </div>
-  )
+  );
 }
-

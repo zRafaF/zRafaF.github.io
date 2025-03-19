@@ -1,11 +1,9 @@
-"use client"
-
-import { Globe } from "lucide-react"
-import { cn } from "../lib/utils"
-import { useLanguage } from "../contexts/language-context"
+import { Globe } from "lucide-react";
+import { cn } from "../lib/utils";
+import { useLanguage } from "../contexts/language-context";
 
 export function LanguageToggle() {
-  const { language, setLanguage } = useLanguage()
+  const { language, setLanguage } = useLanguage();
 
   return (
     <div className="flex items-center space-x-2">
@@ -15,7 +13,9 @@ export function LanguageToggle() {
           onClick={() => setLanguage("en")}
           className={cn(
             "px-3 py-1 text-xs font-medium rounded-full transition-colors",
-            language === "en" ? "bg-emerald-500 text-white" : "text-foreground/70 hover:text-foreground",
+            language === "en"
+              ? "bg-emerald-500 text-white"
+              : "text-foreground/70 hover:text-foreground"
           )}
         >
           EN
@@ -24,13 +24,14 @@ export function LanguageToggle() {
           onClick={() => setLanguage("pt-BR")}
           className={cn(
             "px-3 py-1 text-xs font-medium rounded-full transition-colors",
-            language === "pt-BR" ? "bg-emerald-500 text-white" : "text-foreground/70 hover:text-foreground",
+            language === "pt-BR"
+              ? "bg-emerald-500 text-white"
+              : "text-foreground/70 hover:text-foreground"
           )}
         >
           PT-BR
         </button>
       </div>
     </div>
-  )
+  );
 }
-

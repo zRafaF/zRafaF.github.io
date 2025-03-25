@@ -38,7 +38,7 @@ const PROJECTS: Project[] = [
       "Registro de itens roubados com IA para o Ministério da Justiça. Construído com Next.js + microsserviços FastAPI.",
     image: "./rastreia.png",
     tags: ["AuthJS", "MongoDB", "Shadcn", "AI"],
-    status: ["university-partnership", "completed"],
+    status: ["completed"],
   },
   {
     id: "landing-page",
@@ -66,6 +66,23 @@ const PROJECTS: Project[] = [
     image: "./virote.png",
     tags: ["Python", "React", "OpenCV", "3D Modeling"],
     status: ["university-partnership", "completed"],
+  },
+  {
+    id: "bolinho",
+    title: "Bolinho",
+    description:
+      "Solução integrada para coleta, processamento e interação de dados provenientes de maquinário universal de ensaio.",
+    image: "./bolinho.png",
+    tags: ["Python", "React", "ESP32", "Data Analysis"],
+    status: ["completed"],
+  },
+  {
+    id: "rman",
+    title: "Rman",
+    description: "Sistema de agendamento de ambiente industrial.",
+    image: "./rman.png",
+    tags: ["React", "Firebase"],
+    status: ["completed"],
   },
 ];
 
